@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d0kktqhockglo"]
+
+[ext_resource type="Script" uid="uid://b7vbjbo302fwg" path="res://client.gd" id="1_1drpi"]
+[ext_resource type="PackedScene" uid="uid://difm06sdpe45f" path="res://game.tscn" id="2_uohgo"]
+[ext_resource type="PackedScene" uid="uid://rgug0pu3tqac" path="res://connection_gui.tscn" id="3_xr2rm"]
+
+[node name="Client" type="Node2D" unique_id=1340744165 node_paths=PackedStringArray("connection_gui", "game_master")]
+script = ExtResource("1_1drpi")
+connection_gui = NodePath("Connection_GUI")
+game_master = NodePath("Game_Window")
+
+[node name="Game_Window" parent="." unique_id=1954930298 instance=ExtResource("2_uohgo")]
+visible = false
+
+[node name="Connection_GUI" parent="." unique_id=2084839389 instance=ExtResource("3_xr2rm")]

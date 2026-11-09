@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c68f5x245mgwh"]
+
+[ext_resource type="Script" uid="uid://cu12wdi267l7i" path="res://test_filled_hands.gd" id="1_o7nyw"]
+[ext_resource type="PackedScene" uid="uid://difm06sdpe45f" path="res://game.tscn" id="2_b2b0r"]
+
+[node name="TestFilledHands" type="Node2D" unique_id=1028370282 node_paths=PackedStringArray("game_master")]
+script = ExtResource("1_o7nyw")
+game_master = NodePath("Game_Window")
+
+[node name="Game_Window" parent="." unique_id=1954930298 instance=ExtResource("2_b2b0r")]

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cq6tqknubs4vf"]
+
+[ext_resource type="Script" uid="uid://del3upg87ehwj" path="res://hand_bounds.gd" id="1_uox3c"]
+
+[node name="Hand_Bounds" type="Node2D" unique_id=903593863]
+script = ExtResource("1_uox3c")

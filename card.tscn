@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://d23x582a1tjj"]
+
+[ext_resource type="Texture2D" uid="uid://8b3tei5iiaw8" path="res://cards/back.jpg" id="1_kikvd"]
+[ext_resource type="Script" uid="uid://d25sko6coe7h8" path="res://card.gd" id="2_rjlel"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ra2i3"]
+size = Vector2(725.99994, 1024.0001)
+
+[node name="Card" type="Sprite2D" unique_id=837241655 node_paths=PackedStringArray("selected_rect")]
+scale = Vector2(0.15426998, 0.15624999)
+texture = ExtResource("1_kikvd")
+centered = false
+script = ExtResource("2_rjlel")
+selected_rect = NodePath("ColorRect")
+
+[node name="ClickArea" type="Area2D" parent="." unique_id=1390993794]
+position = Vector2(362.99994, 512)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea" unique_id=921393442]
+position = Vector2(9.1552734e-05, 6.1035156e-05)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_ra2i3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1423650466]
+visible = false
+z_index = -1
+offset_left = -25.928576
+offset_top = -25.600004
+offset_right = 751.92847
+offset_bottom = 1043.2001
+mouse_filter = 1
+color = Color(0.939948, 1.1003803, 0.100611895, 0.5647059)
+
+[node name="Tooltip_Control" type="Control" parent="." unique_id=1452662923]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

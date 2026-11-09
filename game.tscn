@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://difm06sdpe45f"]
+
+[ext_resource type="Script" uid="uid://bqsmc3a1e2th6" path="res://game.gd" id="1_e2o6t"]
+[ext_resource type="Script" uid="uid://d4gi05h6apn2e" path="res://updates_label_container.gd" id="3_fc0e3"]
+[ext_resource type="Script" uid="uid://del3upg87ehwj" path="res://hand_bounds.gd" id="3_feb5d"]
+
+[node name="Game_Window" type="Node2D" unique_id=1954930298 node_paths=PackedStringArray("player_hand_locations", "play_area_locations", "won_cards_locations", "deck_location", "discard_location", "player_name_labels", "scoreboard_label", "choice_hand_dropdown", "updates_label_container")]
+script = ExtResource("1_e2o6t")
+player_hand_locations = [NodePath("Hand_Bounds_Bottom"), NodePath("Hand_Bounds_Left"), NodePath("Hand_Bounds_Top"), NodePath("Hand_Bounds_Right")]
+play_area_locations = [NodePath("Hand_Bounds_PlayArea_Bottom"), NodePath("Hand_Bounds_PlayArea_Left"), NodePath("Hand_Bounds_PlayArea_Top"), NodePath("Hand_Bounds_PlayArea_Right")]
+won_cards_locations = [NodePath("Hand_Bounds_Choice_Bottom"), NodePath("Hand_Bounds_WonCards_Left"), NodePath("Hand_Bounds_WonCards_Top"), NodePath("Hand_Bounds_WonCards_Right")]
+deck_location = NodePath("Hand_Bounds_Deck")
+discard_location = NodePath("Hand_Bounds_Discard")
+player_name_labels = [NodePath("Name_Bottom"), NodePath("Name_Left"), NodePath("Name_Top"), NodePath("Name_Right")]
+scoreboard_label = NodePath("Scoreboard")
+button_nodepaths = {
+"Discard": NodePath("Button_Discard"),
+"Draw": NodePath("Button_Draw"),
+"Play": NodePath("Button_Play")
+}
+choice_hand_dropdown = NodePath("Dropdown_Hand_Choice")
+updates_label_container = NodePath("Updates_Container")
+metadata/_edit_horizontal_guides_ = [1080.0]
+metadata/_edit_vertical_guides_ = [1920.0]
+
+[node name="Dropdown_Hand_Choice" type="OptionButton" parent="." unique_id=632897252]
+offset_left = 1552.0
+offset_top = 784.0
+offset_right = 1648.0
+offset_bottom = 832.0
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_Play" type="Button" parent="." unique_id=408349346]
+offset_left = 1208.0
+offset_top = 856.0
+offset_right = 1280.0
+offset_bottom = 888.0
+disabled = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_Draw" type="Button" parent="." unique_id=480190919]
+offset_left = 1208.0
+offset_top = 896.0
+offset_right = 1280.0
+offset_bottom = 928.0
+disabled = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_Discard" type="Button" parent="." unique_id=779347289]
+offset_left = 1208.0
+offset_top = 936.0
+offset_right = 1280.0
+offset_bottom = 968.0
+disabled = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Scoreboard" type="RichTextLabel" parent="." unique_id=1799051294]
+offset_left = 552.0
+offset_top = 824.0
+offset_right = 704.0
+offset_bottom = 960.0
+text = "Scores:"
+metadata/_edit_use_anchors_ = true
+
+[node name="Hand_Bounds_Bottom" type="Node2D" parent="." unique_id=1641249574]
+position = Vector2(760, 856)
+script = ExtResource("3_feb5d")
+metadata/_custom_type_script = "uid://del3upg87ehwj"
+
+[node name="Hand_Bounds_PlayArea_Bottom" type="Node2D" parent="." unique_id=1627632283]
+position = Vector2(896, 680)
+script = ExtResource("3_feb5d")
+size = Vector2(125, 150)
+metadata/_custom_type_script = "uid://del3upg87ehwj"
+
+[node name="Hand_Bounds_PlayArea_Left" type="Node2D" parent="." unique_id=875240215]
+position = Vector2(464, 464)
+script = ExtResource("3_feb5d")
+size = Vector2(125, 150)
+metadata/_custom_type_script = "uid://del3upg87ehwj"
+
+[node name="Hand_Bounds_PlayArea_Top" type="Node2D" parent="." unique_id=1058809493]
+position = Vector2(896, 232)
+script = ExtResource("3_feb5d")
+size = Vector2(125, 150)
+metadata/_custom_type_script = "uid://del3upg87ehwj"
+
+[node name="Hand_Bounds_PlayArea_Right" type="Node2D" parent="." unique_id=1164643447]
+position = Vector2(1344, 464)
+script = ExtResource("3_feb5d")
+size = Vector2(125, 150)
+metadata/_custom_type_script = "uid://del3upg87ehwj"
+
+[node name="Hand_Bounds_WonCards_Right" type="Node2D" parent="." unique_id=2068527576]
+position = Vector2(1632, 256)
+script = ExtResource("3_feb5d")
+size = Vector2(125, 150)
+metadata/_custom_type_script = "uid://del3upg87ehwj"
+
+[node name="Hand_Bounds_Choice_Bottom" type="Node2D" parent="." unique_id=1100830315]
+position = Vector2(1456, 840)
+script = ExtResource("3_feb5d")
+size = Vector2(300, 150)
+metadata/_custom_type_script = "uid://del3upg87ehwj"
+
+[node name="Hand_Bounds_WonCards_Left" type="Node2D" parent="." unique_id=1476099033]
+position = Vector2(136, 664)
+script = ExtResource("3_feb5d")
+size = Vector2(125, 150)
+metadata/_custom_type_script = "uid://del3upg87ehwj"
+
+[node name="Hand_Bounds_WonCards_Top" type="Node2D" parent="." unique_id=1183163331]
+position = Vector2(520, 56)
+script = ExtResource("3_feb5d")
+size = Vector2(125, 150)
+metadata/_custom_type_script = "uid://del3upg87ehwj"
+
+[node name="Hand_Bounds_Deck" type="Node2D" parent="." unique_id=1829881994]
+position = Vector2(680, 464)
+script = ExtResource("3_feb5d")
+size = Vector2(125, 150)
+metadata/_custom_type_script = "uid://del3upg87ehwj"
+
+[node name="Hand_Bounds_Discard" type="Node2D" parent="." unique_id=255824842]
+position = Vector2(864, 464)
+script = ExtResource("3_feb5d")
+metadata/_custom_type_script = "uid://del3upg87ehwj"
+
+[node name="Hand_Bounds_Left" type="Node2D" parent="." unique_id=1097636579]
+position = Vector2(24, 464)
+script = ExtResource("3_feb5d")
+metadata/_custom_type_script = "uid://del3upg87ehwj"
+
+[node name="Hand_Bounds_Top" type="Node2D" parent="." unique_id=800862811]
+position = Vector2(760, 56)
+script = ExtResource("3_feb5d")
+metadata/_custom_type_script = "uid://del3upg87ehwj"
+
+[node name="Hand_Bounds_Right" type="Node2D" parent="." unique_id=173365552]
+position = Vector2(1496, 464)
+script = ExtResource("3_feb5d")
+metadata/_custom_type_script = "uid://del3upg87ehwj"
+
+[node name="Name_Bottom" type="Label" parent="." unique_id=978864992]
+offset_left = 912.0
+offset_top = 1032.0
+offset_right = 1001.0
+offset_bottom = 1055.0
+text = "South (You)"
+
+[node name="Name_Top" type="Label" parent="." unique_id=737726084]
+offset_left = 920.0
+offset_top = 16.0
+offset_right = 1009.0
+offset_bottom = 39.0
+text = "North"
+horizontal_alignment = 1
+
+[node name="Name_Left" type="Label" parent="." unique_id=1911956225]
+offset_left = 160.0
+offset_top = 408.0
+offset_right = 249.0
+offset_bottom = 431.0
+text = "West"
+horizontal_alignment = 1
+
+[node name="Name_Right" type="Label" parent="." unique_id=1370861245]
+offset_left = 1648.0
+offset_top = 648.0
+offset_right = 1737.0
+offset_bottom = 671.0
+text = "East"
+horizontal_alignment = 1
+
+[node name="Updates_Container" type="Container" parent="." unique_id=584496614 node_paths=PackedStringArray("_color_rect", "_label", "_timer")]
+offset_left = 960.0
+offset_top = 648.0
+offset_right = 1000.0
+offset_bottom = 672.0
+script = ExtResource("3_fc0e3")
+_color_rect = NodePath("Update_Background")
+_label = NodePath("Updates_Label")
+_timer = NodePath("Update_Timer")
+
+[node name="Updates_Label" type="Label" parent="Updates_Container" unique_id=1655100955]
+visible = false
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Update_Background" type="ColorRect" parent="Updates_Container" unique_id=714304274]
+visible = false
+layout_mode = 2
+color = Color(0.63529414, 0.63529414, 0.63529414, 0.4509804)
+
+[node name="Update_Timer" type="Timer" parent="Updates_Container" unique_id=1657233536]
+wait_time = 3.0

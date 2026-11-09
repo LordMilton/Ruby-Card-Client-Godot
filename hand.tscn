@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bmoocb8o7foqw"]
+
+[ext_resource type="Script" uid="uid://db10i5gxj72i0" path="res://hand.gd" id="1_bfasp"]
+
+[node name="Hand" type="Node2D" unique_id=1014399995 node_paths=PackedStringArray("name_label")]
+script = ExtResource("1_bfasp")
+name_label = NodePath("Name_Label")
+
+[node name="Name_Label" type="Label" parent="." unique_id=639605561]
+offset_left = -41.0
+offset_top = -21.0
+offset_right = 47.0
+offset_bottom = 23.0
